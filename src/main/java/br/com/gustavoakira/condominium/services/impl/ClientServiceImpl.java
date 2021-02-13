@@ -4,9 +4,10 @@ import br.com.gustavoakira.condominium.models.Client;
 import br.com.gustavoakira.condominium.repositories.ClientRepository;
 import br.com.gustavoakira.condominium.services.interfaces.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class ClientServiceImpl implements ClientService {
 
     @Autowired
@@ -32,5 +33,11 @@ public class ClientServiceImpl implements ClientService {
     @Override
     public List<Client> getClients() {
         return repository.findAll();
+    }
+
+    @Override
+    public void removeClient(Long id) {
+        Client client = getClient(id);
+        repository.delete(client);
     }
 }

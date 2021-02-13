@@ -5,9 +5,10 @@ import br.com.gustavoakira.condominium.models.Unit;
 import br.com.gustavoakira.condominium.repositories.UnitRepository;
 import br.com.gustavoakira.condominium.services.interfaces.UnitService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class UnitServiceImpl implements UnitService {
 
     @Autowired

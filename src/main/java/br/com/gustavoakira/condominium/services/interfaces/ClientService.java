@@ -9,4 +9,5 @@ public interface ClientService {
     void updateClient(Long id, Client client);
     Client getClient(Long id);
     List<Client> getClients();
+    void removeClient(Long id);
 }

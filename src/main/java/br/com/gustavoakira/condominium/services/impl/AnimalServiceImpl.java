@@ -5,9 +5,10 @@ import br.com.gustavoakira.condominium.models.Client;
 import br.com.gustavoakira.condominium.services.interfaces.AnimalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import br.com.gustavoakira.condominium.repositories.AnimalRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class AnimalServiceImpl implements AnimalService {
 
     @Autowired
@@ -32,6 +33,6 @@ public class AnimalServiceImpl implements AnimalService {
 
     @Override
     public List<Animal> getAnimals(Client client) {
-        return null;
+        return repository.getAnimalsByClient(client);
     }
 }

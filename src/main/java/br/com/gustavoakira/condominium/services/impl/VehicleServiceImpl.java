@@ -4,7 +4,9 @@ import br.com.gustavoakira.condominium.models.Vehicle;
 import br.com.gustavoakira.condominium.services.interfaces.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import br.com.gustavoakira.condominium.repositories.VehicleRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class VehicleServiceImpl implements VehicleService {
     @Autowired
     private VehicleRepository vehicleRepository;
