@@ -10,4 +10,5 @@ public interface AnimalService {
     void updateAnimal(Long id,Animal animal);
     Animal getAnimal(Long id);
     List<Animal> getAnimals(Client client);
+    void removeAnimal(Long id);
 }

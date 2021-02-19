@@ -35,4 +35,10 @@ public class AnimalServiceImpl implements AnimalService {
     public List<Animal> getAnimals(Client client) {
         return repository.getAnimalsByClient(client);
     }
+
+    @Override
+    public void removeAnimal(Long id) {
+        Animal animal = getAnimal(id);
+        repository.delete(animal);
+    }
 }
