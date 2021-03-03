@@ -35,4 +35,9 @@ public class UnitServiceImpl implements UnitService {
     public List<Unit> getUnits(Client client) {
         return repository.getUnitsByClient(client);
     }
+
+    @Override
+    public void removeUnit(Long id) {
+        repository.deleteById(id);
+    }
 }

@@ -40,4 +40,9 @@ public class ClientServiceImpl implements ClientService {
         Client client = getClient(id);
         repository.delete(client);
     }
+
+    @Override
+    public Client getClientByEmail(String email) {
+        return repository.getClientByEmail(email);
+    }
 }

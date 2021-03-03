@@ -1,10 +1,13 @@
 package br.com.gustavoakira.condominium.services.impl;
 
+import br.com.gustavoakira.condominium.models.Client;
 import br.com.gustavoakira.condominium.models.Vehicle;
 import br.com.gustavoakira.condominium.services.interfaces.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import br.com.gustavoakira.condominium.repositories.VehicleRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class VehicleServiceImpl implements VehicleService {
@@ -32,5 +35,10 @@ public class VehicleServiceImpl implements VehicleService {
     public void removeVehicle(Long id) {
         getVehicle(id);
         vehicleRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Vehicle> getVehicles(Client client) {
+        return vehicleRepository.getVehiclesByClient(client);
     }
 }

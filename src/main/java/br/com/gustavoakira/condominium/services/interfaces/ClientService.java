@@ -10,4 +10,5 @@ public interface ClientService {
     Client getClient(Long id);
     List<Client> getClients();
     void removeClient(Long id);
+    Client getClientByEmail(String email);
 }

@@ -10,4 +10,5 @@ public interface UnitService {
     void updateUnit(Long id,Unit unit);
     Unit getUnit(Long id);
     List<Unit> getUnits(Client client);
+    void removeUnit(Long id);
 }
